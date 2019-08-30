@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <title>Dating Site</title>
 </head>
 
@@ -17,7 +18,7 @@
 
       <legend>Your Face</legend>
 
-      <p>your image: <input type="file" onchange="loadImage(event)"/></p>
+      <p>your image: <input type="file" onchange="loadImage(event)" required/></p>
       <img id="pic" src="#"/>
 
     </fieldset>
@@ -28,20 +29,20 @@
 
         <legend>Your General Details</legend>
 
-      <p>Name <input type="text"></p>
+      <p class="tooltip">Name <span class="tooltiptext">Full Name</span><input type="text" required></p>
 
       <p>Gender:
         <input type="radio" name="gender" value="male"> Male
         <input type="radio" name="gender" value="female"> Female
       </p>
 
-      <p>age: <input type="number"></p>
+      <p>age: <input type="number" required></p>
 
-      <p>date of birth: <input type="date"></p>
+      <p>date of birth: <input type="date" required></p>
 
-      <p>favorite color: <input type="color" name="" id=""></p>
+      <p>favorite color: <input type="color" name="" id="" required></p>
 
-      <p>Country: <input list="countries" name="Country">
+      <p>Country: <input list="countries" name="Country" required>
         <datalist id="countries">
           <option value="USA">
           <option value="UK">
@@ -70,14 +71,15 @@
 
         <legend>Your Contact Info</legend>
 
-      <p>Email: <input type="email" name="" id=""></p>
+      <p>Email: <input type="email" name="" id="" required></p>
 
-      <p>Phone: <input type="tel" name="" id=""></p>
+      <p>Phone: <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="" id="" required></p>
 
-      <p>Address: <input type="text" name="" id=""></p>
+      <p>Address: <input type="text" name="" id="" required></p>
 
     </fieldset>
 
+    <input type="submit" value="submit">
 
   </form>
 
